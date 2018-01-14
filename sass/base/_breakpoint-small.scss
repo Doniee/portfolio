@@ -1,0 +1,376 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+  padding-bottom: 100px;
+}
+
+.row {
+  width: $hex-width;
+  margin: 0 auto;
+  height: auto;
+}
+
+.hex {
+  margin-top: 0;
+}
+
+.hex-breakpoint-medium {
+  display: none;
+}
+
+// Menu
+
+a.hex {
+  background: transparent;
+  height: 50px;
+  display: inline;
+  width: auto;
+  margin: 0;
+  padding: 12px 0;
+
+  h2 {
+    color: $orange;
+    font-size: 4vw;
+    position: relative;
+    display: inline;
+    top: auto;
+    left: auto;
+    transition: color 0.2s;
+  }
+
+  &:after,
+  &:before {
+    display: none;
+  }
+
+  &:hover h2 {
+    color: darken($orange, 10%);
+  }
+}
+
+$width: 10px;
+$root3: 1.73205080757;
+$height: $width/$root3;
+$color: $yellow;
+.mobile-menu-separator {
+  display: inline-block;
+  width: $width;
+  height: $height;
+  background-color: $color;
+  margin: 0 5px 5px 5px;
+  vertical-align: middle;
+
+  &:before,
+  &:after {
+    border-left: $width/2 solid transparent;
+    border-right: $width/2 solid transparent;
+  }
+
+  &:before {
+    border-bottom: $height/2 solid $color;
+  }
+
+  &:after {
+    border-top: $height/2 solid $color;
+  }
+}
+
+.row:nth-child(2) {
+  // Primary 1
+  .hex:nth-child(2) {
+    margin-top: 130px;
+    margin-left: -100px;
+  }
+
+  .hex:nth-child(1),
+  .hex:nth-child(3) {
+    display: none;
+  }
+}
+
+.row:nth-child(3) {
+  // Primary 2
+  .hex:nth-child(2) {
+    margin-left: 50px;
+  }
+
+  // Primary 3
+  .hex:nth-child(3) {
+    margin-left: -100px;
+  }
+
+  .hex:nth-child(1),
+  .hex:nth-child(4) {
+    display: none;
+  }
+}
+
+// Links
+.row:nth-child(4) {
+  width: 96%;
+  margin: 30px 0;
+  position: absolute;
+  top: 0;
+
+  > .hex:nth-child(2),
+  > .hex:nth-child(6) {
+    display: none;
+  }
+}
+
+.row:nth-child(6) {
+  // override medium styles (grid)
+  display: block;
+  height: auto;
+
+  .hex:nth-child(1) {
+    margin-left: 50px;
+  }
+
+  .hex:nth-child(2) {
+    margin-left: -100px;
+  }
+
+  .hex-text.hex {
+    position: absolute;
+    border: none;
+    transform: none;
+    left: -50px;
+    width: 300px;
+    background-color: transparent;
+
+    &:after,
+    &:before {
+      display: none;
+    }
+
+    p {
+      text-align: left;
+    }
+
+    br {
+      display: none;
+    }
+  }
+
+  .hex:nth-child(5) {
+    top: 530px;
+  }
+
+  .hex:nth-child(6) {
+    top: 620px;
+  }
+
+  .hex:nth-child(9) {
+    margin-left: 50px;
+    margin-bottom: 300px;
+  }
+
+  .hex:nth-child(10) {
+    display: none;
+  }
+}
+
+.row:nth-child(8) {
+  // override medium styles (grid)
+  height: auto;
+  display: block;
+
+  .hex:nth-child(2) {
+    transform: none;
+    margin-top: 50px;
+  }
+
+  .hex:nth-child(1),
+  .hex:nth-child(3),
+  .hex:nth-child(5),
+  .hex:nth-child(6) {
+    display: none;
+  }
+}
+
+.row:nth-child(9),
+.row:nth-child(11),
+.row:nth-child(13),
+.row:nth-child(15),
+.row:nth-child(17),
+.row:nth-child(19) {
+  height: 475px;
+  width: 100%;
+
+  // My work titles
+  .hex-secondary {
+    background-color: transparent;
+    width: 60%;
+    margin: 85px 0 10px;
+    height: 30px;
+
+    &:after,
+    &:before {
+      display: none;
+    }
+
+    h3 {
+      width: 250px;
+      font-size: 1.2rem;
+    }
+  }
+
+  $width: 400px;
+  $height: $width/$root3;
+  $root2: 1.41421356237;
+  $capWidth: $width/$root2; // caps being the top and bottom rhombuses
+
+  // My work texts
+  .hex-text {
+    background-color: transparent;
+    // border: none;
+
+    // &:after,
+    // &:before {
+    //   display: none;
+    // }
+    width: $width;
+    height: $height;
+
+    &:before,
+    &:after {
+      // border-left: $width/2 solid transparent;
+      // border-right: $width/2 solid transparent;
+      width: $capWidth;
+      height: $capWidth;
+      left: ($width - $capWidth)/2 - $borderWidth; //offset by half the difference in
+    }
+
+    &:before {
+      // border-bottom: $height/2 solid $color;
+      top: -$width/$root2/2; //half the rhombus height
+      border-top: $capBorder;
+      border-right: $capBorder;
+    }
+
+    &:after {
+      // border-top: $height/2 solid $color;
+      bottom: -$width/$root2/2; //half the rhombus height
+      border-bottom: $capBorder;
+      border-left: $capBorder;
+    }
+
+    p {
+      width: 265px;
+      top: auto;
+      bottom: -75px;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+
+    br {
+      display: none;
+    }
+  }
+
+  .hex-image {
+    @include center;
+    top: 48%;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+}
+
+// My work Portfolio
+.row:nth-child(19) {
+  height: auto;
+  margin: 0 auto 140px;
+
+  .hex-secondary {
+    margin: 80px 0 20px;
+
+    h3 {
+      top: 115px;
+    }
+  }
+
+  .hex-text p {
+    bottom: 40px;
+  }
+
+  .hex:nth-child(1),
+  .hex:nth-child(4) {
+    display: none;
+  }
+}
+
+// Contact links
+$width: 100px;
+$height: $width/$root3;
+.row:nth-child(22) .hex:nth-child(3),
+.row:nth-child(22) .hex:nth-child(4),
+.row:nth-child(23) .hex:nth-child(3) {
+  width: $width;
+  height: $height;
+
+  &:before,
+  &:after {
+    border-left: $width/2 solid transparent;
+    border-right: $width/2 solid transparent;
+  }
+
+  &:before {
+    border-bottom: $height/2 solid $color;
+  }
+
+  &:after {
+    border-top: $height/2 solid $color;
+  }
+
+  .contact-icon {
+    font-size: 3rem;
+  }
+}
+
+.row:nth-child(22) {
+  width: 210px;
+}
+
+.row:nth-child(23) .hex:nth-child(3) {
+  margin-top: -29px;
+}
+
+.row:nth-child(1),
+.row:nth-child(5),
+.row:nth-child(7),
+.row:nth-child(10),
+.row:nth-child(12),
+.row:nth-child(14),
+.row:nth-child(16),
+.row:nth-child(18),
+.row:nth-child(20),
+.row:nth-child(21),
+.row:nth-child(24) {
+  display: none;
+}
+
+.row:nth-child(9),
+.row:nth-child(11),
+.row:nth-child(13),
+.row:nth-child(15),
+.row:nth-child(22) {
+  .hex:nth-child(1),
+  .hex:nth-child(5) {
+    display: none;
+  }
+}
+
+.row:nth-child(17) {
+  .hex:nth-child(1),
+  .hex:nth-child(5) {
+    display: none;
+  }
+}
+
+.row:nth-child(23) {
+  .hex:nth-child(1),
+  .hex:nth-child(2),
+  .hex:nth-child(4) {
+    display: none;
+  }
+}

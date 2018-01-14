@@ -1,0 +1,170 @@
+.hex-breakpoint-medium {
+  display: inline-block;
+}
+
+.row {
+  text-align: center;
+
+  &:nth-child(even) {
+    padding: 0;
+  }
+}
+
+.offset-1,
+.offset-2 {
+  margin-left: 0;
+}
+
+.hex {
+  text-align: left;
+}
+
+.row:nth-child(3) {
+  .hex:nth-child(5),
+  .hex:nth-child(6) {
+    display: none;
+  }
+}
+
+.row:nth-child(4) {
+  .hex:nth-child(1) {
+    display: none;
+  }
+}
+
+.row:nth-child(5) {
+  .hex:nth-child(5) {
+    display: none;
+  }
+}
+
+.row:nth-child(6) {
+  height: 3 * ($hex-width / 1.135);
+  display: grid;
+  grid-template-columns: 1fr $hex-width $hex-width $hex-width 1fr;
+  grid-template-rows: ($hex-width / 1.135) ($hex-width / 1.135) ($hex-width / 1.135);
+  grid-gap: 0 3px;
+  grid-template-areas:
+    '. a title b .'
+    'c content1 content2 d .'
+    '. e img f .';
+
+  .hex:nth-child(1) {
+    grid-area: a;
+  }
+  .hex:nth-child(2) {
+    grid-area: title;
+  }
+  .hex:nth-child(3) {
+    grid-area: b;
+    justify-self: end;
+  }
+  .hex:nth-child(4) {
+    grid-area: c;
+    justify-self: end;
+    transform: translateX($hex-width / 2 +1px);
+  }
+  .hex:nth-child(5) {
+    grid-area: content1;
+    transform: translateX($hex-width / 2 +1px);
+  }
+  .hex:nth-child(6) {
+    grid-area: content2;
+    transform: translateX($hex-width / 2 +1px);
+  }
+  .hex:nth-child(7) {
+    grid-area: d;
+    transform: translateX($hex-width / 2 +1px);
+  }
+  .hex:nth-child(8) {
+    grid-area: e;
+  }
+  .hex:nth-child(9) {
+    grid-area: img;
+  }
+  .hex:nth-child(10) {
+    grid-area: f;
+  }
+}
+
+.row:nth-child(7) {
+  margin-left: -($hex-width +3px);
+  .hex:nth-child(4),
+  .hex:nth-child(5) {
+    display: none;
+  }
+}
+
+.row:nth-child(8) {
+  height: 2 * ($hex-width / 1.135);
+  display: grid;
+  grid-template-columns: 1fr $hex-width $hex-width 1fr;
+  grid-template-rows: ($hex-width / 1.135) ($hex-width / 1.135);
+  grid-gap: 0 2px;
+  grid-template-areas:
+    'a b c .'
+    'd e f g';
+
+  .hex:nth-child(1) {
+    grid-area: a;
+    justify-self: end;
+    transform: translateX($hex-width / 2 +1px);
+  }
+  .hex:nth-child(2) {
+    transform: translateX($hex-width / 2 +1px);
+    grid-area: b;
+  }
+  .hex:nth-child(3) {
+    transform: translateX($hex-width / 2 +1px);
+    grid-area: c;
+  }
+  .hex:nth-child(4) {
+    justify-self: end;
+    grid-area: d;
+  }
+  .hex:nth-child(5) {
+    grid-area: e;
+
+    // Make the shape yellow
+    background: $yellow;
+
+    &:before {
+      border-bottom: $height/2 solid $yellow;
+    }
+
+    &:after {
+      border-top: $height/2 solid $yellow;
+    }
+  }
+
+  .hex:nth-child(6) {
+    grid-area: f;
+  }
+
+  .hex:nth-child(7) {
+    grid-area: g;
+    justify-self: start;
+  }
+}
+
+.row:nth-child(10),
+.row:nth-child(12),
+.row:nth-child(14),
+.row:nth-child(16),
+.row:nth-child(18) {
+  .hex:nth-child(5) {
+    display: none;
+  }
+}
+
+.row:nth-child(19) {
+  margin-left: -($hex-width +2px);
+}
+
+.row:nth-child(20) {
+  display: none;
+}
+
+.row:nth-child(24) {
+  margin-left: $hex-width +1px;
+}

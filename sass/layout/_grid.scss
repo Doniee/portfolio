@@ -1,0 +1,19 @@
+.row {
+  height: $hex-width / 1.135;
+
+  &:nth-child(even) {
+    padding-left: $hex-width / 2 + 2px;
+  }
+}
+
+.row-blank {
+  pointer-events: none;
+}
+
+.offset-1 {
+  margin-left: $hex-width + 3px;
+}
+
+.offset-2 {
+  margin-left: $hex-width * 2 + 6px;
+}

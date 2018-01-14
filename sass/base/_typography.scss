@@ -1,0 +1,75 @@
+h1,
+h2,
+h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.hex h1,
+.hex h2,
+.hex h3 {
+  margin: 0;
+  text-align: center;
+  @include center;
+  color: #fff;
+  width: 90%;
+  z-index: 2;
+}
+
+p {
+  // font-family: 'Lato', sans-serif;
+  // font-family: 'Muli', sans-serif;
+  // font-family: 'Pt Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  // font-family: 'Titilliumn Web', sans-serif;
+
+  // font-family: 'Barlow Condensed', sans-serif;
+  // font-family: 'Faustina', sans-serif;
+  // font-family: 'Lora', sans-serif;
+  // font-family: 'PT Serif', sans-serif;
+  // font-family: 'Open Sans Condensed', sans-serif;
+  // font-family: 'Roboto Condensed', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.1rem;
+  font-weight: 200;
+  margin: 0;
+  //Barlow+Condensed|Barlow+Semi+Condensed|Lato|Open+Sans+Condensed:300|Roboto+Condensed
+}
+
+.hex-primary h1,
+.hex-primary h2 {
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+}
+
+.hex-primary h2 {
+  line-height: 1.5rem;
+}
+
+.hex-secondary h2 {
+  font-weight: 700;
+  line-height: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.hex-secondary h3 {
+  z-index: 5;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: $brown;
+}
+
+.modal h1 {
+  font-size: 1.5rem;
+}
+
+.modal h3 {
+  font-size: 0.9rem;
+  margin: 25px 0 5px 0;
+}
+
+b {
+  font-weight: 600;
+}

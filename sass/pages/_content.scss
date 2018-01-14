@@ -1,0 +1,69 @@
+.hex-breakpoint-medium,
+.mobile-menu-separator {
+  display: none;
+}
+
+.hex-primary {
+  background: $orange;
+
+  &:before {
+    border-bottom: $height/2 solid $orange;
+  }
+
+  &:after {
+    border-top: $height/2 solid $orange;
+  }
+}
+
+.hex-secondary {
+  background: $yellow;
+
+  &:before {
+    border-bottom: $height/2 solid $yellow;
+  }
+
+  &:after {
+    border-top: $height/2 solid $yellow;
+  }
+}
+
+.hex-tertiary {
+  background: #fff;
+}
+
+.hex-text {
+  background: #fff;
+}
+
+.hex-text p {
+  @include center;
+  transform: translate(-50%, -50%) translateZ(0);
+  width: 95%;
+  padding: 10px;
+  text-align: center;
+  z-index: 5;
+}
+
+.contact-icon {
+  @include center;
+  font-size: 4rem;
+  color: $brown;
+  transition: all 0.3s;
+
+  &:hover {
+    color: lighten($brown, 4%);
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+a.hex {
+  transition: all 0.2s;
+
+  &:hover {
+    transform: scale(0.95);
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}

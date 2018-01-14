@@ -1,0 +1,33 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+//sets height and width, if no height is specified falls back to width
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+//---------Centering content in different ways
+
+//Horizontally and vertically
+@mixin center() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//Center horizontally
+@mixin center-horizontal() {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+//Center vertically
+@mixin center-vertical() {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
