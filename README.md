@@ -1,8 +1,7 @@
 # Portfolio
 My portfolio site.
 
-Please note: the code is over 5 years old, I would do a lot of things differently now (2023).
-
+Please note: the code is over 5 years old, I would do a lot of things differently now (2023). Also some of the links don't work anymore.
 Live site: [https://portfolio-lotta.firebaseapp.com/](https://portfolio-lotta.firebaseapp.com/)
 
 ## Prerequisites
